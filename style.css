@@ -71,12 +71,12 @@ body * {
   position: absolute;
   top: 50%;
   z-index: 1;
-  left: 0;
+  right: 0;
   transform: translateY(-50%);
-  animation: slide-in 0.2s forwards;
+  animation: slide-back 0.2s forwards;
 }
 
-.light#switch button {
+.light #switch button {
   animation: slide-in 0.2s forwards;
 }
 
@@ -163,5 +163,24 @@ footer {
   }
   .light {
     --bg-url: url(./assets/bg-desktop-light.jpg);
+  }
+}
+
+/*animation */
+@keyframes slide-in {
+  from {
+    right: 0;
+  }
+  to {
+    right: 50%;
+  }
+}
+
+@keyframes slide-back {
+  from {
+    right: 50%;
+  }
+  to {
+    right: 0;
   }
 }
